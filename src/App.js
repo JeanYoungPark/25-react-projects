@@ -11,6 +11,7 @@ import RandomColor from './components/random-color';
 import ScrollIndicator from './components/scroll-indicator';
 import SearchAutocomplete from './components/search-autocomplete';
 import StarRating from './components/star-rating';
+import TicTacToe from './components/tic-tac-toe';
 import TreeView from './components/tree-view';
 import menus from './components/tree-view/data';
 
@@ -42,7 +43,9 @@ function App() {
 			{/* Github Profile Finder */}
 			{/* <GithubProfileFinder /> */}
 			{/* Search Autocomplete */}
-			<SearchAutocomplete />
+			{/* <SearchAutocomplete /> */}
+			{/* Tic Tac Toe */}
+			<TicTacToe />
 		</div>
 	);
 }
