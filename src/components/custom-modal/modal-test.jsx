@@ -14,7 +14,7 @@ export default function ModalTest() {
     }
 
     return(
-        <div>
+        <div className='modal-button-container'>
             <button onClick={handleToggleModalPopup}>Open Modal Popup</button>
             {
                 showModal && <Modal

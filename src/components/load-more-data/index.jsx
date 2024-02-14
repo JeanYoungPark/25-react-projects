@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import './styles.css'
+
 export default function LoadMoreData() {
     const [loading, setLoading] = useState(false)
     const [products, setProducts] = useState([])
@@ -29,10 +30,6 @@ export default function LoadMoreData() {
     useEffect(() => {
         if(products && products.length === 100) setDisableButton(true)
     }, [products])
-
-    if(loading) {
-        return <div>Loading data! Please wait</div>
-    }
 
     return (
         <div className='load-more-container'>
