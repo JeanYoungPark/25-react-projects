@@ -35,9 +35,11 @@ export default function RandomColor() {
 
     return (
         <div className='color-wrapper' style={{background: color}}>
-            <button onClick={() => setTypeOfColor('hex')}>Create HEX Color</button>
-            <button onClick={() => setTypeOfColor('rgb')}>Create RGB Color</button>
-            <button onClick={typeOfColor === 'hex' ? handleCreateRandomHexColor : handleCreateRandomRgbColor}>Generate Random Color</button>
+            <div className='color-button-wrapper'>
+                <button onClick={() => setTypeOfColor('hex')}>Create HEX Color</button>
+                <button onClick={() => setTypeOfColor('rgb')}>Create RGB Color</button>
+                <button onClick={typeOfColor === 'hex' ? handleCreateRandomHexColor : handleCreateRandomRgbColor}>Generate Random Color</button>
+            </div>
             <div className='title'>
                 <h3>{typeOfColor === 'rgb' ? 'RGB Color' : 'HEX Color'}</h3>
                 <h1>{color}</h1>

@@ -18,8 +18,8 @@ export default function Accordion(options) {
     function handleMultiSelection(getCurrentId){
         let cpyMultiple = [...multiple]
         const findIndexOfCurrentId = cpyMultiple.indexOf(getCurrentId)
-
-        if(findIndexOfCurrentId !== -1) cpyMultiple.push(getCurrentId)
+        
+        if(findIndexOfCurrentId === -1) cpyMultiple.push(getCurrentId)
         else cpyMultiple.splice(findIndexOfCurrentId, 1)
 
         setMultiple(cpyMultiple)
@@ -27,7 +27,7 @@ export default function Accordion(options) {
 
     return (
         <div className="acc-wrapper">
-            <button onClick={() =>  setEnableMultiSelection(!enableMultiSelection)}>Enable Multi Selection</button>
+            <button className={enableMultiSelection ? 'multi': ''} onClick={() =>  setEnableMultiSelection(!enableMultiSelection)}>Enable Multi Selection</button>
             <div className="accordion">
                 {
                     data && data.length > 0 ? 

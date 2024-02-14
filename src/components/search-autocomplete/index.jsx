@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import Suggestions from "./suggestions"
+import './styles.css'
 
 export default function SearchAutocomplete() {
     const [loading, setLoading] = useState(false)
