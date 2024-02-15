@@ -12,8 +12,7 @@ const dummyApiResponse = {
     showCustomTabs: true,
     showCustomModal: true,
     showGithubProfileFinder: true,
-    showSearchAutocomplete: true,
-    show
+    showSearchAutocomplete: true
 }
 
 function featureFlagsDataServiceCall(){
